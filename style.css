@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=JetBrains+Mono:wght@300&family=Montserrat:ital@1&family=Roboto:wght@500&family=Russo+One&family=Source+Code+Pro:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    opacity: 0;
+}
+
+:root {
+    --font-primary:#0072F5;
+}
+
+body {
+    background-color: #000;
+    font-family: "JetBrains Mono",monospace;
+}
+
+.user img {
+    border-radius: 20px;
+    box-shadow: 10px 10px 60px;
+    height: 170px;
+    vertical-align: middle;
+}
+
+.user {
+    display: inline-block;
+    margin: 10rem 10rem;
+}
+
+.user .ping .status-ping {
+    height: 25px;
+    width: 25px;
+    border-radius: 4px;
+    background-color: #fff;
+    position: absolute;
+    z-index: -1;
+    top: 315px;
+    left: 315px;
+}
+
+.user .ping .status {
+    height: 25px;
+    width: 25px;
+    border-radius: 4px;
+    background-color: #fff;
+    position: absolute;
+    z-index: -1;
+    top: 315px;
+    left: 315px;
+    animation: ping 1s cubic-bezier(0,0,.2,1) infinite;
+}
+
+@keyframes ping {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    75%, 100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.user div {
+    display: inline-block;
+    width: 800px;
+}
+
+.user div p {
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    margin-left: 10px;
+}
+
+.user div p span{
+    color: var(--font-primary);
+}
+
+.user div h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.10em;
+    color: #ECEDEE;
+    margin: 10px;
+}
+
+h1 {
+    color: #fff;
+    padding: 0px 35%;
+}
+
+.techno {
+    margin: 50px 11.5em;
+}
+
+.techno a {
+    margin: 5px 0px;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #181818;
+    width: 180px;
+    text-align: center;
+    display: inline-block;
+    border: var(--font-primary) 1px solid;
+}
+
+.techno a img {
+    height: 25px;
+    margin-right: 10px;
+    vertical-align: text-top;
+    float: left;
+}
+
+hr {
+    width: 75%;
+    margin: 0px auto;
+    border-color: #ffffff26;
+}
+
+.footer {
+    margin: 1em 11em;
+    margin-bottom: 50px;
+}
+
+.footer a {
+    padding: 7px;
+    background-color: #16181A;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.footer a:hover {
+    background-color: #232527;
+}
+
+.footer p {
+    display: inline-block;
+    color: #fff;
+    margin-left: 40em;
+}
+
+.footer p span {
+    color: var(--font-primary);
+}
+
+@media only screen and (max-width: 576px) {
+
+    .user div {
+        display: inline-block;
+        width: 250px;
+    }
+
+    .user div h2 {
+        font-size: 1rem;
+        letter-spacing: -0.10em;
+        color: #ECEDEE;
+        margin: 10px 45px;
+    }
+    
+    .user div p {
+        color: #fff;
+        letter-spacing: -0.05em;
+        margin-left: 10px;
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .user div p span{
+        color: var(--font-primary);
+    }
+    
+    
+    h1 {
+        color: #fff;
+        padding: 0px 35%;
+    }
+
+    .user img {
+        border-radius: 20px;
+        box-shadow: 10px 10px 60px;
+        height: 150px;
+        margin-left: 3.3em;
+    }
+    
+    .user {
+        display: inline-block;
+        margin: 10rem 10rem;
+    }
+    
+    .user .ping .status-ping {
+        height: 20px;
+        width: 20px;
+        border-radius: 4px;
+        background-color: #fff;
+        position: absolute;
+        z-index: -1;
+        top: 295px;
+        left: 350px;
+    }
+
+    .user .ping .status {
+        height: 20px;
+        width: 20px;
+        border-radius: 4px;
+        background-color: #fff;
+        position: absolute;
+        z-index: -1;
+        top: 295px;
+        left: 350px;
+        animation: ping 1s cubic-bezier(0,0,.2,1) infinite;
+    }
+
+    .footer {
+        margin: 1em 6em;
+        margin-bottom: 50px;
+    }
+
+    .footer a {
+        margin: 0;
+        padding: 7px;
+        background-color: #16181A;
+        color: #fff;
+        font-size: 12px;
+        text-align: center;
+        border-radius: 12px;
+    }
+    
+    .footer a:hover {
+        background-color: #232527;
+    }
+    
+    .footer p {
+        margin-top: 1em;
+        display: inline-block;
+        color: #fff;
+        margin-left: 1em;
+    }
+    
+    .footer p span {
+        color: var(--font-primary);
+    }
+
+    h1 {
+        color: #fff;
+        padding: 0px 20%;
+    }
+
+}
