@@ -1,256 +1,229 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=JetBrains+Mono:wght@300&family=Montserrat:ital@1&family=Roboto:wght@500&family=Russo+One&family=Source+Code+Pro:wght@200&display=swap');
+:root {
+    --light-bg: #eee;
+    --light-fontColor: #222;
+    
+    --dark-bg: #181818;
+    --dark-fontColor: #eee;
+    --dark-foreGround: #eee;
 
-* {
-    margin: 0;
-    padding: 0;
+    --fontColor: var(--light-fontColor);
+    --background: var(--light-bg);
+    --foreGround: var(--dark-bg);
 }
 
 ::-webkit-scrollbar {
-    opacity: 0;
+    display:none;
 }
 
-:root {
-    --font-primary:#0072F5;
+.dark {
+    --fontColor: var(--dark-fontColor);
+    --background: var(--dark-bg);
+    --foreGround: var(--dark-foreGround)
 }
 
 body {
-    background-color: #000;
-    font-family: "JetBrains Mono",monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    color: var(--fontColor);
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--background);
+    overflow-x: hidden;
+    text-decoration: none;
+    transition: all .2s;
 }
 
-.user img {
-    border-radius: 20px;
-    box-shadow: 10px 10px 60px;
-    height: 170px;
-    vertical-align: middle;
+body a {
+    color: var(--fontColor);
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
 }
 
-.user {
-    display: inline-block;
-    margin: 10rem 10rem;
-}
-
-.user .ping .status-ping {
-    height: 25px;
-    width: 25px;
-    border-radius: 4px;
-    background-color: #fff;
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: var(--foreGround);
     position: absolute;
-    z-index: -1;
-    top: 315px;
-    left: 315px;
+    right: 0;
+    cursor: pointer;
 }
 
-.user .ping .status {
-    height: 25px;
-    width: 25px;
-    border-radius: 4px;
-    background-color: #fff;
+.wave {
+    width: 100%;
+    height: 100%;
+    background-color: var(--foreGround);
     position: absolute;
-    z-index: -1;
-    top: 315px;
-    left: 315px;
-    animation: ping 1s cubic-bezier(0,0,.2,1) infinite;
+    top: 0;
+    left: 0;
+    animation: dalga 2s infinite;
 }
 
-@keyframes ping {
+@keyframes dalga {
     0% {
         transform: scale(1);
         opacity: 1;
     }
-    75%, 100% {
-        transform: scale(2);
-        opacity: 0;
+    50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 }
 
-.user div {
-    display: inline-block;
-    width: 800px;
+.about {
+    display: flex;
+    width: 75%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
 }
 
-.user div p {
-    color: #fff;
-    font-weight: 600;
-    letter-spacing: -0.05em;
-    margin-left: 10px;
+.about div {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
 }
 
-.user div p span{
-    color: var(--font-primary);
+.about div .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
 }
 
-.user div h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    letter-spacing: -0.10em;
-    color: #ECEDEE;
-    margin: 10px;
+.about div span {
+    width: 90%;
+    text-align: center;
 }
 
-h1 {
-    color: #fff;
-    padding: 0px 35%;
+.about img {
+    width: 20%;
+    height: 40%;
+    border-radius: 10%;
+}
+
+.about .social {
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+}
+
+.fa-twitter {
+    font-size: 30px;
+    margin: 2px;
+    color: #1DA1F2;
+}
+
+.fa-twitter:before {
+    content: "\f099";
+    font-family: "Font Awesome 5 Brands";
+}
+
+.fa-instagram {
+    font-size: 30px;
+    margin: 2px;
+    color: #E4405F;
+}
+
+.fa-instagram:before {
+    content: "\f16d";
+    font-family: "Font Awesome 5 Brands";
+}
+
+.fa-discord {
+    margin: 2px;
+    font-size: 30px;
+    color: #7289DA; /* Discord mavi */
+}
+
+.fa-discord:before {
+    content: "\f Discord ikonunun Unicode değeri */
+    font-family: "Font Awesome 5 Brands"; /* Font Awesome ikon fontu */
+}
+
+.fa-github {
+    margin: 2px;
+    font-size: 30px;
+    color: var(--fontColor); /* GitHub siyah */
+}
+
+.fa-github:before {
+    content: "\f Github ikonunun Unicode değeri */
+    font-family: "Font Awesome 5 Brands"; /* Font Awesome ikon fontu */
+}
+
+.fa-linkedin {
+    margin: 2px;
+    font-size: 30px;
+    color: #0077B5; /* LinkedIn mavisi */
+}
+
+.fa-linkedin:before {
+    content: "\f Linkedin ikonunun Unicode değeri */
+    font-family: "Font Awesome 5 Brands"; /* Font Awesome ikon fontu */
 }
 
 .techno {
-    margin: 50px 11.5em;
+    display: flex;
+    width: 75%;
+    justify-content: space-around;
+    margin: 5px;
+    flex-direction: column;
+}
+
+.techno div {
+    display: flex; 
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.techno div img {
+    width: 25%;
 }
 
 .techno a {
-    margin: 5px 0px;
-    text-decoration: none;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #181818;
-    width: 180px;
-    text-align: center;
-    display: inline-block;
-    border: var(--font-primary) 1px solid;
-}
-
-.techno a img {
-    height: 25px;
-    margin-right: 10px;
-    vertical-align: text-top;
-    float: left;
-}
-
-hr {
-    width: 75%;
-    margin: 0px auto;
-    border-color: #ffffff26;
+    padding: 5px;
+    border: 1px solid #3498db;
+    margin: 3px;
+    display: flex; 
+    justify-content: space-between;
+    border-radius: 6px; 
+    align-items: center;
+    width: 150px;
 }
 
 .footer {
-    margin: 1em 11em;
-    margin-bottom: 50px;
+    width: 100%; 
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.footer a {
-    padding: 7px;
-    background-color: #16181A;
-    color: #fff;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 12px;
+.footer hr {
+    width: 100%;
 }
 
-.footer a:hover {
-    background-color: #232527;
+.footer .first {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
 }
 
-.footer p {
-    display: inline-block;
-    color: #fff;
-    margin-left: 40em;
+.footer div span {
+    color: #0077Bb;
 }
 
-.footer p span {
-    color: var(--font-primary);
-}
-
-@media only screen and (max-width: 576px) {
-
-    .user div {
-        display: inline-block;
-        width: 250px;
-    }
-
-    .user div h2 {
-        font-size: 1rem;
-        letter-spacing: -0.10em;
-        color: #ECEDEE;
-        margin: 10px 45px;
-    }
-    
-    .user div p {
-        color: #fff;
-        letter-spacing: -0.05em;
-        margin-left: 10px;
-        font-size: 1rem;
-        text-align: center;
-    }
-    
-    .user div p span{
-        color: var(--font-primary);
-    }
-    
-    
-    h1 {
-        color: #fff;
-        padding: 0px 35%;
-    }
-
-    .user img {
-        border-radius: 20px;
-        box-shadow: 10px 10px 60px;
-        height: 150px;
-        margin-left: 3.3em;
-    }
-    
-    .user {
-        display: inline-block;
-        margin: 10rem 10rem;
-    }
-    
-    .user .ping .status-ping {
-        height: 20px;
-        width: 20px;
-        border-radius: 4px;
-        background-color: #fff;
-        position: absolute;
-        z-index: -1;
-        top: 295px;
-        left: 350px;
-    }
-
-    .user .ping .status {
-        height: 20px;
-        width: 20px;
-        border-radius: 4px;
-        background-color: #fff;
-        position: absolute;
-        z-index: -1;
-        top: 295px;
-        left: 350px;
-        animation: ping 1s cubic-bezier(0,0,.2,1) infinite;
-    }
-
-    .footer {
-        margin: 1em 6em;
-        margin-bottom: 50px;
-    }
-
-    .footer a {
-        margin: 0;
-        padding: 7px;
-        background-color: #16181A;
-        color: #fff;
-        font-size: 12px;
-        text-align: center;
-        border-radius: 12px;
-    }
-    
-    .footer a:hover {
-        background-color: #232527;
-    }
-    
-    .footer p {
-        margin-top: 1em;
-        display: inline-block;
-        color: #fff;
-        margin-left: 1em;
-    }
-    
-    .footer p span {
-        color: var(--font-primary);
-    }
-
-    h1 {
-        color: #fff;
-        padding: 0px 20%;
-    }
-
+.date {
+    color: var(--fontColor) !important;
 }
