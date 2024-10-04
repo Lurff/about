@@ -1,0 +1,50 @@
+{
+	"hi": "Hi There!",
+	"iam": "I'am Atakan",
+	"navbar": {
+		"list": {
+			"home": "Home",
+			"about": "About",
+			"contact": "Contact",
+			"faq": "Skills"
+		}
+	},
+	"me": {
+		"title": "Hi, I'am Atakan",
+		"about": "'Full-stack web' developer",
+		"details": "based in Sakarya, Türkiye",
+		"buttons": {
+			"more": "Read More",
+			"contact": "Contact With Me"
+		}
+	},
+	"about": {
+		"title": "Hi!",
+		"paragraph": "Hello! I'm Atakan, a developer with a strong passion for technology and software development. My expertise lies in mobile app and web development. I'm constantly driven to learn new technologies and improve my projects.",
+		"projects": {
+			"title": "My Product",
+			"loading": "Loading...",
+			"noDescription": "No description",
+			"noLicense": "No License"
+		}
+	},
+	"contact": {
+		"title": "Contact me",
+		"description": "If you have any questions, project proposals, or collaboration ideas, feel free to reach out. I’ll get back to you as soon as possible."
+	},
+	"footer": {
+		"developer": "© 2024-present <strong>Atakan Çoban.</strong> All rights reserved.",
+		"description": "Everything on this site is protected by the <strong> MIT </strong> license."
+	},
+	"skills": {
+		"title": "Skills",
+		"position": {
+			"title": "My current position",
+			"description": "I'am not working any position right now :)"
+		}
+	},
+	"notfound": {
+		"description": "Page Not Found: {{ url }}",
+		"button": "Go Back"
+	}
+}
