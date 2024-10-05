@@ -56,7 +56,7 @@ const Contact = () => {
 			<Navbar />
 			<div className="w-full h-full flex flex-col items-center justify-center p-3 gap-5">
 				<div className="flex flex-col gap-5 justify-center w-3/4 max-lg:w-full">
-					<h1 className="text-gray-300 text-4xl max-lg:text-center max-xl:text-3xl max-md:text-2xl underline-offset-8 underline">
+					<h1 className="text-gray-300 text-4xl max-lg:text-center max-xl:text-3xl max-md:text-2xl">
 						<strong>{t("contact.title")}</strong>
 					</h1>
 					<div className="min-h-[100px] max-lg:w-full">

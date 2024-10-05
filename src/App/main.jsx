@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
 import "./index.css";
@@ -32,8 +32,8 @@ createRoot(document.getElementById("root")).render(
 		</svg>
 		<BrowserRouter>
 			<Routes>
-				<Route index path="*" element={<NotFound />} />
-				<Route index path="/" element={<Entry />} />
+				<Route exact={true} path="/" element={<Entry />} />
+				<Route path="*" element={<NotFound />} />
 				<Route path="/about" element={<About />} />
 				<Route path="/contact" element={<Contact />} />
 				<Route path="/home" element={<Home />} />
