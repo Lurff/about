@@ -3,7 +3,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
 import "./index.css";
-import "../Components/Navbar/Style.css";
+import "../Components/Navbar/style.css";
 import "./i18n.js";
 
 const NotFound = lazy(() => import("../Pages/NotFound/NotFound"));
