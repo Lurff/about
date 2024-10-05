@@ -1,4 +1,4 @@
-# React.js Minimal Starter
+# React.js Personal Website Template
 
 Look at the [React.js documentation](https://react.dev/learn) to learn more.
 
