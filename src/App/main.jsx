@@ -6,6 +6,7 @@ import "./index.css";
 import "../Components/Navbar/style.css";
 import "./i18n.js";
 
+// Lazy yüklenen bileşenler
 const NotFound = lazy(() => import("../Pages/NotFound/NotFound"));
 const Entry = lazy(() => import("../Pages/Entry/Entry"));
 const Contact = lazy(() => import("../Pages/Contact/Contact"));
@@ -30,15 +31,19 @@ createRoot(document.getElementById("root")).render(
 			<rect width="100%" height="100%" fill="#000" />
 			<rect width="100%" height="100%" filter="url(#n)" opacity="0.15" />
 		</svg>
-		<BrowserRouter>
-			<Routes>
-				<Route exact={true} path="/" element={<Entry />} />
-				<Route path="*" element={<NotFound />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/contact" element={<Contact />} />
-				<Route path="/home" element={<Home />} />
-				<Route path="/skills" element={<Skills />} />
-			</Routes>
-		</BrowserRouter>
+		
+		{/* Suspense ile bileşenleri sarıyoruz, fallback ile yüklenirken ne gösterileceğini belirliyoruz */}
+		<Suspense fallback={<div>Yükleniyor...</div>}>
+			<BrowserRouter>
+				<Routes>
+					<Route exact path="/" element={<Entry />} />
+					<Route path="*" element={<NotFound />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/contact" element={<Contact />} />
+					<Route path="/home" element={<Home />} />
+					<Route path="/skills" element={<Skills />} />
+				</Routes>
+			</BrowserRouter>
+		</Suspense>
 	</div>
 );
