@@ -33,7 +33,6 @@ createRoot(document.getElementById("root")).render(
 		</svg>
 		
 		{/* Suspense ile bileşenleri sarıyoruz, fallback ile yüklenirken ne gösterileceğini belirliyoruz */}
-		<Suspense fallback={<div>Yükleniyor...</div>}>
 			<BrowserRouter>
 				<Routes>
 					<Route exact path="/" element={<Entry />} />
@@ -44,6 +43,5 @@ createRoot(document.getElementById("root")).render(
 					<Route path="/skills" element={<Skills />} />
 				</Routes>
 			</BrowserRouter>
-		</Suspense>
 	</div>
 );
