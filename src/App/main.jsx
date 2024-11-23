@@ -14,6 +14,8 @@ const About = lazy(() => import("../Pages/About/About"));
 const Home = lazy(() => import("../Pages/Home/Home"));
 const Skills = lazy(() => import("../Pages/Skills/Skills"));
 
+import Loader from "../Components/Suspense/Suspense";
+
 createRoot(document.getElementById("root")).render(
 	<div className="w-full h-full relative">
 		<svg
@@ -31,9 +33,8 @@ createRoot(document.getElementById("root")).render(
 			<rect width="100%" height="100%" fill="#000" />
 			<rect width="100%" height="100%" filter="url(#n)" opacity="0.15" />
 		</svg>
-		
-		{/* Suspense ile bileşenleri sarıyoruz, fallback ile yüklenirken ne gösterileceğini belirliyoruz */}
-			<BrowserRouter>
+		<BrowserRouter>
+			<Suspense fallback={<Loader />}>
 				<Routes>
 					<Route exact path="/" element={<Entry />} />
 					<Route path="*" element={<NotFound />} />
@@ -42,6 +43,7 @@ createRoot(document.getElementById("root")).render(
 					<Route path="/home" element={<Home />} />
 					<Route path="/skills" element={<Skills />} />
 				</Routes>
-			</BrowserRouter>
+			</Suspense>
+		</BrowserRouter>
 	</div>
 );
