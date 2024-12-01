@@ -41,6 +41,11 @@ const Skills = () => {
 			href: "https://electronjs.org/",
 		},
 		{
+			title: "Tauri.Js",
+			icon: "https://skillicons.dev/icons?i=tauri",
+			href: "https://v2.tauri.app/",
+		},
+		{
 			title: "React",
 			icon: "https://skillicons.dev/icons?i=react",
 			href: "https://tr.react.dev/",
