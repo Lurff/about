@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
-import Img from "../../Public/profile.jpg";
+import Img from "../../Public/Profile.jpg";
 
 const Home = () => {
 	const { t, i18n } = useTranslation();
