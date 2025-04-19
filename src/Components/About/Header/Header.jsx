@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { TypeAnimation } from "react-type-animation";
 
-import Motorlu from "../../../Public/Motorlu.jpg";
+import Motorlu from "../../../Public/Kedi.jpg";
 
 const Header = () => {
 	const { t } = useTranslation();
@@ -11,16 +11,8 @@ const Header = () => {
 		<div className="w-full h-full flex items-center justify-center p-3 gap-5 max-lg:flex-col">
 			<div className="flex items-center justify-center max-lg:w-full m-5">
 				<div className="flex flex-col items-center relative max-lg:w-full">
-					<img
-						src={Motorlu}
-						draggable={false}
-						className="w-64 bg-cover rounded-lg z-10"
-					/>
-					<img
-						src={Motorlu}
-						draggable={false}
-						className="w-64 bg-cover rounded-lg blur-xl absolute"
-					/>
+					<img src={Motorlu} draggable={false} className="w-64 bg-cover rounded-lg z-10" />
+					<img src={Motorlu} draggable={false} className="w-64 bg-cover rounded-lg blur-xl absolute" />
 				</div>
 			</div>
 			<div className="flex flex-col justify-between gap-3 w-1/2 h-full max-lg:items-center max-lg:w-full">
