@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { TypeAnimation } from "react-type-animation";
 
-import Motorlu from "../../../Public/Kedi.jpg";
+import Motorlu from "../../../Public/Motorlu.jpg";
 
 const Header = () => {
 	const { t } = useTranslation();
