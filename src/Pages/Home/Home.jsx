@@ -53,12 +53,12 @@ const Home = () => {
 				<div className="flex items-center justify-center w-2/3">
 					<div className="flex flex-col items-center justify-center w-full relative">
 						<img
-							src={"https://avatars.githubusercontent.com/u/98714395?s=400&u=4f8076b1af2ed1c79960c65a876b8057204907c0&v=4"}
+							src={Img}
 							draggable={false}
 							className="w-64 bg-cover rounded-lg z-10"
 						/>
 						<img
-							src={"https://avatars.githubusercontent.com/u/98714395?s=400&u=4f8076b1af2ed1c79960c65a876b8057204907c0&v=4"}
+							src={Img}
 							draggable={false}
 							className="w-64 bg-cover rounded-lg blur-xl absolute"
 						/>
